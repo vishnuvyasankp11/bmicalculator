@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">BMI Calculator</h1>
+        <div class="card mx-auto mt-4 p-4 shadow" style="max-width: 500px;">
+            <form>
+                <div class="mb-3">
+                    <label for="inputAge" class="form-label">Age:</label>
+                    <input type="number" id="inputAge" class="form-control" placeholder="Enter your age">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gender:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inputGender" id="genderMale" value="Male">
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inputGender" id="genderFemale" value="Female">
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputWeight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="inputWeight" class="form-control" placeholder="Enter your weight">
+                </div>
+                <div class="mb-3">
+                    <label for="inputHeight" class="form-label">Height (cm):</label>
+                    <input type="number" id="inputHeight" class="form-control" placeholder="Enter your height">
+                </div>
+                <button type="button" class="btn btn-primary w-100" onclick="calculateBMI()">Calculate BMI</button>
+                <button type="button" class="btn btn-secondary w-100 mt-2" onclick="clearFields()">Clear</button>
+            </form>
+        </div>
+
+        <div class="result-container text-center mt-4">
+            <h4>Your BMI:</h4>
+            <input type="text" id="result" class="form-control text-center mb-4" readonly>
+        </div>
+
+        <div class="d-flex justify-content-center mt-3">
+            <div class="bmi-category p-3 text-center">
+                <strong>Underweight</strong> (BMI < 18.5)
+            </div>
+            <div class="bmi-category p-3 text-center">
+                <strong>Normal weight</strong> (BMI 18.5–24.9)
+            </div>
+            <div class="bmi-category p-3 text-center">
+                <strong>Overweight</strong> (BMI 25–29.9)
+            </div>
+            <div class="bmi-category p-3 text-center">
+                <strong>Obesity</strong> (BMI ≥ 30)
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
